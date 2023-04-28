@@ -58,7 +58,7 @@ for file in contenido:
 
             content = Image.open(path + "/" + file)
             img_bytes_arr = io.BytesIO()
-            content.save(img_bytes_arr, format=(datos[1].upper()), subsampling=0, quality=100)
+            content.save(img_bytes_arr, format='PNG', subsampling=0, quality=100)
             img_bytes_arr = img_bytes_arr.getvalue()
             imgB64 = base64.b64encode(img_bytes_arr)
             param = {
